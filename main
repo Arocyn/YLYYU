@@ -1,0 +1,99 @@
+#include <stdio.h> //Bu burada kullandigim her sey icin gerekli olan kutuphane.
+#include <conio.h> //Bu da "getch" fonksiyonun calismasi icin gerekli olan kutuphane.
+
+
+int main() { 				//Programimin ana fonksiyonu olan "main" fonksiyonunu tanimladim.
+
+    int ALES = 0; 			//Burada "ALES" degiskeninini tanimladim.
+    double ORT = 0.0;		//Burada "Not Ortalamasý" degiskeninini tanimladim.
+    int MUL = 0;			//Burada "Mülakat" degiskeninini tanimladim.
+    int YDS = 0;			//Burada "YDS" degiskeninini tanimladim.
+    int TOEFL = 0;			//Burada "TOEFL" degiskeninini tanimladim.
+	int DIS = 0;			//Burada "Disiplin Durumu" degiskeninini tanimladim.
+    int a = 0; 				//Burada "a" degiskeninini tanimladim.
+    int b = 0;				//Burada "b" degiskeninini tanimladim.
+    int c = 0;				//Burada "c" degiskeninini tanimladim.
+
+	//Burada kullanicidan gerekli verileri istedim
+
+	printf("ALES Notunuzu Giriniz: "); 							//Kullanicidan istedigim girdiyi ekrana yazdirdim.
+    scanf("%d", &ALES);											//Kullanicinin deger girmesini isteyip bunu "ALES" degiskenine atadim.
+
+    printf("Not Ortalamanizi Giriniz: ");						//Kullanicidan istedigim girdiyi ekrana yazdirdim.
+    scanf("%lf", &ORT);											//Kullanicinin deger girmesini isteyip bunu "ORT" degiskenine atadim.
+
+    printf("Mulakat Notunuzu Giriniz: ");						//Kullanicidan istedigim girdiyi ekrana yazdirdim.
+    scanf("%d", &MUL);											//Kullanicinin deger girmesini isteyip bunu "MUL" degiskenine atadim.
+
+    printf("YDS Notunuzu Giriniz: ");							//Kullanicidan istedigim girdiyi ekrana yazdirdim.
+    scanf("%d", &YDS);											//Kullanicinin deger girmesini isteyip bunu "YDS" degiskenine atadim.
+
+    printf("TOEFL Notunuzu Giriniz: ");							//Kullanicidan istedigim girdiyi ekrana yazdirdim.
+    scanf("%d", &TOEFL);										//Kullanicinin deger girmesini isteyip bunu "TOEFL" degiskenine atadim.
+
+    printf("Disiplin cezaniz var mi? (0: Hayir 1: Evet)");		//Kullanicidan istedigim girdiyi ekrana yazdirdim.
+    scanf("%d", &DIS);											//Kullanicinin deger girmesini isteyip bunu "DIS" degiskenine atadim.
+
+	printf("\n");												//Sonuclarin bir satir asagidan vermesi icin.
+
+	//A Universitesi Icin
+    //ALES veya ORT
+
+    if (ALES >= 70 || ORT >= 3); 		//"ALES" veya "Not Ortalamasi" degerinden en az biri isteneni sagliyorsa "else" calismayip diger komuta geciyor.
+    else a++;							//Saglamiyorsa "a" degerini "1" artiriyor.
+
+	//MUL
+    if (MUL >= 60); 					//"Mulakat" degeri isteneni saglýyorsa else calismayip diger komuta geciyor.
+	else a++;							//Saglamiyorsa "a" degerini "1" artiriyor.
+
+    //YDS veya TOEFL
+    if (YDS >= 70 || TOEFL >= 200); 	//"YDS veya "TOEFL" degerinden en az biri isteneni sagliyorsa "else" calismayýp diger komuta geciyor.
+    else a++;							//Saglamiyorsa "a" degerini "1" artiriyor.
+
+	if (a == 0) printf("A Universitesinde yuksek lisans yapabilirsiniz!\n");	//"a" degiskeni sifira esit ise ekrana komuttaki ciktiyi veriyor.
+    else printf("A univerisitesinde yuksek lisans yapamazsiniz.\n");			//"a" degiskeni sifirdan farkli bir deger almissa ekrana komuttaki ciktiyi veriyor.
+
+    //B üniversitesi içim
+    //ALES veya ORT
+
+	if (ALES >= 50 || ORT >= 3); 		//"ALES" veya "Not Ortalamasi" degerinden en az biri isteneni sagliyorsa "else" calismayip diger komuta geciyor.
+    else b++;							//Saglamiyorsa "b" degerini "1" artiriyor.
+
+    //MUL
+    if (MUL >= 70); 					//"Mulakat" degeri isteneni sagliyorsa else calismayip diger komuta geciyor.
+    else b++;							//Saglamiyorsa "b" degerini "1" artiriyor.
+
+    //YDS veya TOEFL
+    if (YDS >= 60 || TOEFL >= 180); 	//"YDS veya "TOEFL" degerinden en az biri isteneni sagliyorsa "else" calismayip diger komuta geciyor.
+    else b++;							//Saglamiyorsa "b" degerini "1" artiriyor.
+
+    //Disiplin Durumu
+    if (DIS == 0);						//"DIS" degeri isteneni sagliyorsa else calismayip diger komuta geciyor.
+    else b++;							//Saglamiyorsa "b" degerini "1" artiriyor.
+
+    if (b == 0) printf("B Universitesinde yuksek lisans yapabilirsiniz!\n");	//"b" degiskeni sifira esit ise ekrana komuttaki ciktiyi veriyor.
+    else printf("B univerisitesinde yuksek lisans yapamazsiniz.\n");			//"b" degiskeni sifirdan farkli bir deger almiþsa ekrana komuttaki ciktiyi veriyor.
+
+	//C üniversitesi için
+	//ALES veya ORT
+
+	if (ALES >= 40 || ORT >= 2.20); 	//"ALES" veya "Not Ortalamasi" degerinden en az biri isteneni sagliyorsa "else" calismayip diger komuta geciyor.
+    else c++;							//Saglamiyorsa "c" degerini "1" artiriyor.
+
+    //MUL
+    if (MUL >= 80); 					//"Mulakat" degeri isteneni sagliyorsa else calismayip diger komuta geciyor.
+    else c++;							//Saglamiyorsa "c" degerini "1" artiriyor.
+
+    //YDS veya TOEFL
+    if (YDS >= 85 || TOEFL >= 250); 	//"YDS veya "TOEFL" degerinden en az biri isteneni sagliyorsa "else" calismayip diger komuta geciyor.
+    else c++;							//Saglamiyorsa "c" degerini "1" artiriyor.
+
+    if (c == 0) printf("C Universitesinde yuksek lisans yapabilirsiniz!\n");	//"c" degiskeni sifira eþit ise ekrana komuttaki ciktiyi veriyor.
+    else printf("C univerisitesinde yuksek lisans yapamazsiniz.\n");			//"c" degiskeni sifirdan farkli bir deðer almissa ekrana komuttaki ciktiyi veriyor.
+
+    printf("\n");										//Cikis ifadesini bir satir asagidan vermesi icin.
+    printf("Cikmak icin herhangi bir tusa basin.");		//Kullanicidan son bir istekde bulunuyorum.
+    getch();											//Programin "exe" dosyasinda iþlem yaptiktan sonra kapandigi icin bu kodu ekledim.
+
+	return 0;
+}
